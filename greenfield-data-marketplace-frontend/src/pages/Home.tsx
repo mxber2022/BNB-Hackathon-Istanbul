@@ -170,10 +170,9 @@ const Home = () => {
         gap={50}
       >
         <TitleCon flexDirection={'column'} alignItems={'center'} gap={20}>
-          <CardTitle>Build You Own dApps with BNB Greenfield</CardTitle>
+          <CardTitle>Connect with us</CardTitle>
           <CardSubTitle>
-            We’ve prepared all the toolings you need to get started with BNB
-            Greenfield Now!
+            We are striving to provide actual value to the ecosystem, based on problems we identify in our own lives
           </CardSubTitle>
         </TitleCon>
         <CardCon gap={18}>
@@ -186,7 +185,7 @@ const Home = () => {
             </CardItem>
           </a>
           <a
-            href="https://docs.bnbchain.org/greenfield-docs/docs/guide/home"
+            href="https://github.com/mxber2022/BNB-Hackathon-Istanbul"
             target="_blank"
           >
             <CardItem alignItems={'center'} gap={16} flexDirection={'column'}>
@@ -195,7 +194,7 @@ const Home = () => {
             </CardItem>
           </a>
           <a
-            href="https://docs.bnbchain.org/greenfield-docs/docs/guide/home"
+            href="https://github.com/mxber2022/BNB-Hackathon-Istanbul"
             target="_blank"
           >
             <CardItem alignItems={'center'} gap={16} flexDirection={'column'}>
@@ -203,13 +202,13 @@ const Home = () => {
               <CardItemTitle className="title">Github</CardItemTitle>
             </CardItem>
           </a>
-          <a href="https://forum.bnbchain.org/" target="_blank">
+          <a href="https://forum.sentinal.org/" target="_blank">
             <CardItem alignItems={'center'} gap={16} flexDirection={'column'}>
               <FullTeamIcon w={32} h={32} className="icon"></FullTeamIcon>
               <CardItemTitle className="title">Forum</CardItemTitle>
             </CardItem>
           </a>
-          <a href="https://discord.gg/bnbchain" target="_blank">
+          <a href="https://discord.gg/sentinal" target="_blank">
             <CardItem alignItems={'center'} gap={16} flexDirection={'column'}>
               <DiscordIcon w={32} h={32} className="icon"></DiscordIcon>
               <CardItemTitle className="title">Discord</CardItemTitle>
