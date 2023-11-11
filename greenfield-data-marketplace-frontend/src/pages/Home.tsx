@@ -6,8 +6,23 @@ import GithubIcon from '../components/svgIcon/GithubIcon';
 import { DocIcon, FullTeamIcon, LinkArrowIcon } from '@totejs/icons';
 import DiscordIcon from '../components/svgIcon/DiscordIcon';
 import BSCIcon from '../components/svgIcon/BSCIcon';
+import { Client } from '@bnb-chain/greenfield-js-sdk';
+import { client, selectSp } from '../client/index';
+import { useAccount } from 'wagmi';
+import { useState } from 'react';
+import { getOffchainAuthKeys } from '../utils/offchainAuth';
 
 const Home = () => {
+
+  const { address, connector } = useAccount();
+  console.log("address: ", address);
+  const [createBucketInfo, setCreateBucketInfo] = useState<{
+    bucketName: string;
+  }>({
+    bucketName: '',
+  });
+
+
   return (
     <Container flexDirection={'column'} alignItems={'center'}>
       <BannerInfo>
@@ -28,13 +43,97 @@ const Home = () => {
         <WorkMainTitle>SUBMIT RESPONSE</WorkMainTitle>
         <h2>BNB ISTANBUL</h2>
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSet6XlbvDKJSEkMb46NXUDsp8wenBCAiCbXflVg1FNBdTEy_g/viewform?embedded=true" width="640" height="824" >Loading…</iframe>
-        <button>Upload to Greenfield</button>
+        {/* <button onClick={uploadToGreenfield}>Upload to Greenfield</button> */}
+
+
+
+
+
+
+
+        <h4>Create Bucket</h4>
+      bucket name :
+      <input
+        value={createBucketInfo.bucketName}
+        placeholder="bucket name"
+        onChange={(e) => {
+          setCreateBucketInfo({ ...createBucketInfo, bucketName: e.target.value });
+        }}
+      />
+      <br />  
+
+        <button
+        onClick={async () => {
+          if (!address) return;
+
+          const spInfo = await selectSp();
+          console.log('spInfo', spInfo);
+
+          const provider = await connector?.getProvider();
+          const offChainData = await getOffchainAuthKeys(address, provider);
+          if (!offChainData) {
+            alert('No offchain, please create offchain pairs first');
+            return;
+          }
+
+          const createBucketTx = await client.bucket.createBucket(
+            {
+              bucketName: createBucketInfo.bucketName,
+              creator: address,
+              visibility: 'VISIBILITY_TYPE_PUBLIC_READ',
+              chargedReadQuota: '0',
+              spInfo: {
+                primarySpAddress: spInfo.primarySpAddress,
+              },
+              paymentAddress: address,
+            },
+            {
+              // type: 'ECDSA',
+              // privateKey: ACCOUNT_PRIVATEKEY,
+              type: 'EDDSA',
+              domain: window.location.origin,
+              seed: offChainData.seedString,
+              address,
+            },
+          );
+
+          const simulateInfo = await createBucketTx.simulate({
+            denom: 'BNB',
+          });
+
+          console.log('simulateInfo', simulateInfo);
+
+          const res = await createBucketTx.broadcast({
+            denom: 'BNB',
+            gasLimit: Number(simulateInfo?.gasLimit),
+            gasPrice: simulateInfo?.gasPrice || '5000000000',
+            payer: address,
+            granter: '',
+          });
+
+          if (res.code === 0) {
+            alert('success');
+          }
+        }}
+      >
+        broadcast with simulate
+      </button>
+
+
+
+
+
+
 
         {/*
             option1 : Create Bucket -> upload data to bucket
 
             option2 : Check for existing bucket and upload to user selected bucket
+
+            List all the buckets
         */}
+
+
 
         <WorkItem flexDirection={'column'} gap={20}>
           <WorkTitle>Backendless Framework </WorkTitle>

@@ -1,4 +1,19 @@
 .title_{
     
     font-size: 50px;
+
+        position: relative;
+        line-height: 32px;
+        font-weight: 500;
+        background: linear-gradient(
+          73.6deg,
+          #24af21 25%,
+          #1c99cf 59.38%,
+          #2A4CFF 85.42%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    
 }

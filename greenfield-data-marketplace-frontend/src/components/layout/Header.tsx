@@ -122,7 +122,7 @@ const Header = () => {
           src={LogoGroup}
           alt="logo"
         /> */}
-        <h1 className='title_'>HACK.REV</h1>
+        <h1 className='title_'>SENTINEL</h1>
 
         <Search width="380px" height="40px"></Search>
       </LeftCon>
