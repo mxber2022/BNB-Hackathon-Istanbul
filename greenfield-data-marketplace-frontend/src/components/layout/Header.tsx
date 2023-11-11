@@ -38,6 +38,7 @@ import LogoGroup from '../../images/logo-group.png';
 import { BSCLogo } from '../svgIcon/BSCLogo';
 import { BSC_CHAIN_ID, GF_CHAIN_ID } from '../../env';
 import Search from '../../components/Search';
+import './mystyle.css';
 
 const CustomMenuButton = forwardRef(
   (props: { children: ReactNode }, ref: ForwardedRef<HTMLButtonElement>) => {
@@ -114,13 +115,15 @@ const Header = () => {
       height={80}
     >
       <LeftCon gap={42} alignItems={'center'}>
-        <img
+        {/* <img
           onClick={() => {
             navigate('/');
           }}
           src={LogoGroup}
           alt="logo"
-        />
+        /> */}
+        <h1 className='title_'>HACK.REV</h1>
+
         <Search width="380px" height="40px"></Search>
       </LeftCon>
 

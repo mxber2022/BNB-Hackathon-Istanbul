@@ -14,30 +14,28 @@ const Home = () => {
         <img src={Bg} alt="" />
         <Info flexDirection={'column'} gap={26}>
           <Title>
-            DECENTRALIZED<br></br> DATA MARKETPLACE
+            DECENTRALIZED<br></br> FORM MARKETPLACE
           </Title>
-          <SubTitle>
+          {/* <SubTitle>
             A Best Practice of BNB Greenfield Cross Chain Programmable Ability.
-          </SubTitle>
-          <a
-            href="https://github.com/bnb-chain/greenfield-data-marketplace-frontend"
-            target="_blank"
-          >
-            <GithubCon
-              gap={12}
-              justifyContent={'flex-start'}
-              alignItems={'center'}
-            >
-              <GithubIcon w={22} h={22} className="githubIcon"></GithubIcon>
-              BUILD MY MARKETPLACE
-              <LinkArrowIcon w={18} h={18} className="arrow"></LinkArrowIcon>
-            </GithubCon>
-          </a>
+          </SubTitle> */}
         </Info>
       </BannerInfo>
       <HomeList></HomeList>
+
+
       <WorkInfo flexDirection={'column'} gap={37}>
-        <WorkMainTitle>How it works</WorkMainTitle>
+        <WorkMainTitle>SUBMIT RESPONSE</WorkMainTitle>
+        <h2>BNB ISTANBUL</h2>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSet6XlbvDKJSEkMb46NXUDsp8wenBCAiCbXflVg1FNBdTEy_g/viewform?embedded=true" width="640" height="824" >Loading…</iframe>
+        <button>Upload to Greenfield</button>
+
+        {/*
+            option1 : Create Bucket -> upload data to bucket
+
+            option2 : Check for existing bucket and upload to user selected bucket
+        */}
+
         <WorkItem flexDirection={'column'} gap={20}>
           <WorkTitle>Backendless Framework </WorkTitle>
           <WorkDesc>
@@ -71,6 +69,8 @@ const Home = () => {
           </WorkDesc>
         </WorkItem>
       </WorkInfo>
+
+
       <Cards
         alignItems={'center'}
         justifyContent={'center'}
