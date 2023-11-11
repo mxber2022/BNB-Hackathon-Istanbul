@@ -53,18 +53,23 @@ export const CreateObject = () => {
             }
 
             const provider = await connector?.getProvider();
+            console.log("provider: ", provider);
             const offChainData = await getOffchainAuthKeys(address, provider);
             if (!offChainData) {
               alert('No offchain, please create offchain pairs first');
               return;
             }
 
+            
             const fileBytes = await file.arrayBuffer();
             console.log("fileBytes: ", fileBytes);
+            console.log("handle: ", await (window as any).FileHandle);
+
             const hashResult = await (window as any).FileHandle.getCheckSums(
-              new Uint8Array(fileBytes),
-            );
+                new Uint8Array(fileBytes),
+              );
             const { contentLength, expectCheckSums } = hashResult;
+
 
             console.log('offChainData', offChainData);
             console.log('hashResult', hashResult);
@@ -84,11 +89,12 @@ export const CreateObject = () => {
                 type: 'EDDSA',
                 domain: window.location.origin,
                 seed: offChainData.seedString,
-                address,
-                // type: 'ECDSA',
+                address: address,
+                //type: 'ECDSA',
                 // privateKey: ACCOUNT_PRIVATEKEY,
               },
             );
+            console.log("createObjectTx: ", createObjectTx);
 
             const simulateInfo = await createObjectTx.simulate({
               denom: 'BNB',
