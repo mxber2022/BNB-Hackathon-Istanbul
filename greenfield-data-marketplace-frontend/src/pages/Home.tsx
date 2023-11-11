@@ -103,11 +103,9 @@ const Home = () => {
 
 
       <WorkInfo flexDirection={'column'} gap={37}>
-      <WorkMainTitle>Create Form</WorkMainTitle>
-          <p>htts://</p>
-        <WorkMainTitle>SUBMIT RESPONSE</WorkMainTitle>
+{/* 
         <h2>BNB ISTANBUL</h2>
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSet6XlbvDKJSEkMb46NXUDsp8wenBCAiCbXflVg1FNBdTEy_g/viewform?embedded=true" width="640" height="824" >Loading…</iframe>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSet6XlbvDKJSEkMb46NXUDsp8wenBCAiCbXflVg1FNBdTEy_g/viewform?embedded=true" width="640" height="824" >Loading…</iframe> */}
         {/* <button onClick={uploadToGreenfield}>Upload to Greenfield</button> */}
 
 
@@ -193,22 +191,24 @@ const Home = () => {
 
 
 
-        <WorkItem flexDirection={'column'} gap={20}>
+        {/* <WorkItem flexDirection={'column'} gap={20}>
           <WorkTitle>Backendless Framework </WorkTitle>
           <WorkDesc>
             Data-marketplace fully utilizes smart contracts, greenfield APIs,
             and pre-defined rules to avoid complex backend deployments,
             simplifying the deployment process to the extreme.
           </WorkDesc>
-        </WorkItem>
-        <WorkItem flexDirection={'column'} gap={20}>
+        </WorkItem> */}
+
+        {/* <WorkItem flexDirection={'column'} gap={20}>
           <WorkTitle>Fully Greenfield Hosted Website</WorkTitle>
           <WorkDesc>
             The data-marketplace website is hosted by greenfield, no traditional
             cloud infrastructure，anti-Censorship.
           </WorkDesc>
-        </WorkItem>
-        <WorkItem flexDirection={'column'} gap={20}>
+        </WorkItem> */}
+
+        {/* <WorkItem flexDirection={'column'} gap={20}>
           <WorkTitle>Fully EVM Compatible</WorkTitle>
           <WorkDesc>
             Data-marketplace has implemented smart contracts using Solidity,
@@ -218,12 +218,14 @@ const Home = () => {
             access data.
           </WorkDesc>
         </WorkItem>
+         */}
+
         <WorkItem flexDirection={'column'} gap={20}>
-          <WorkTitle>Ultimate Fast Trading Experience</WorkTitle>
-          <WorkDesc>
+          {/* <WorkTitle>Ultimate Fast Trading Experience</WorkTitle> */}
+          {/* <WorkDesc>
             Thanks to the fast blocking time of Greenfield and BSC, users can
             complete data listing and trading in seconds.
-          </WorkDesc>
+          </WorkDesc> */}
         </WorkItem>
       </WorkInfo>
 

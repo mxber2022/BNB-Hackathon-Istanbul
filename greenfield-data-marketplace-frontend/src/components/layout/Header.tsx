@@ -130,7 +130,7 @@ const Header = () => {
 
         <Button className='profile_btn_Forms' onClick={() => {
             if (!isConnecting && !isConnected) handleModalOpen();
-              navigate('/profile?tab=collections');
+              navigate('/profile/CreateForm');
             }} variant="text" > Create Form 
         </Button>
 

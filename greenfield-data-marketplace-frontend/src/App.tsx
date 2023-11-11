@@ -16,6 +16,7 @@ import { Route, Routes, HashRouter } from 'react-router-dom';
 import { ModalProvider } from './context/modal';
 import { GlobalProvider } from './context/global';
 import { WalletModalProvider } from './context/walletModal';
+import CreateForm from './components/profile/CreateForm';
 
 import './base/global.css';
 
@@ -52,6 +53,11 @@ const routes: Array<IRoute> = [
   {
     path: '/folder',
     element: <Folder></Folder>,
+  },
+
+  {
+    path: '/profile/CreateForm',
+    element: <CreateForm></CreateForm>,
   },
 ];
 

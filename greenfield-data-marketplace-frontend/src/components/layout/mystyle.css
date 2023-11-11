@@ -48,3 +48,55 @@
 .t_{
     font-size: 30px !important;
 }
+
+.createform_btn {
+    background-color: red !important;
+}
+
+/* mystyle.css */
+
+/* Add any global styles if needed */
+
+.zina {
+    /* Common styles for the button */
+    padding: 10px 20px;
+    font-size: 30px !important;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #474d57;
+    color: white; /* White text color */
+    transition: background-color 0.3s ease;
+    height: 50px;
+    
+    display: flex;
+   
+    margin-top: 200px;
+  }
+  
+  .zina:hover {
+    background-color: rgba(51, 56, 51, 0.194);
+  }
+
+  .zinax {
+    /* Common styles for the button */
+    padding: 10px 20px;
+    font-size: 30px !important;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #474d57;
+    color: white; /* White text color */
+    transition: background-color 0.3s ease;
+    height: 50px;
+    
+    display: flex;
+   
+    margin-top: 100px;
+  }
+  
+  .zinax:hover {
+    background-color: rgba(51, 56, 51, 0.194);
+  }
+  
+  
