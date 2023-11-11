@@ -17,6 +17,7 @@ import { ModalProvider } from './context/modal';
 import { GlobalProvider } from './context/global';
 import { WalletModalProvider } from './context/walletModal';
 import CreateForm from './components/profile/CreateForm';
+import AvailableForms from './components/profile/AvailableForms';
 
 import './base/global.css';
 
@@ -58,6 +59,11 @@ const routes: Array<IRoute> = [
   {
     path: '/profile/CreateForm',
     element: <CreateForm></CreateForm>,
+  },
+
+  {
+    path: '/profile/AvailableForms',
+    element: <AvailableForms></AvailableForms>,
   },
 ];
 
