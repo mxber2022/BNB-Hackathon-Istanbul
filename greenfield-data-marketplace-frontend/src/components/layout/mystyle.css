@@ -19,7 +19,7 @@
 }
 
 .profile_btn {
-    background-color: gray;
+    background-color: #2e323a;
     color: white !important;
     width: 100px;
     height: 34px !important;
@@ -27,8 +27,18 @@
     font-weight: 600 !important;
 }
 
+
 .profile_btn:hover {
     background-color: #474d57;
+}
+
+.profile_btn_Forms {
+    background-color: #2e323a;
+    color: white !important;
+    width: 150px;
+    height: 34px !important;
+    line-height: 17px;
+    font-weight: 600 !important;
 }
 
 .img_banner{

@@ -3,7 +3,7 @@ import HomeList from '../components/home/Index';
 import { Flex } from '@totejs/uikit';
 import Bg from '../images/bg.png';
 import x from '../images/x.jpg';
-import z from '../images/z.jpg';
+import zz from '../images/zz.jpg';
 import GithubIcon from '../components/svgIcon/GithubIcon';
 import { DocIcon, FullTeamIcon, LinkArrowIcon } from '@totejs/icons';
 import DiscordIcon from '../components/svgIcon/DiscordIcon';
@@ -89,7 +89,7 @@ const Home = () => {
   return (
     <Container flexDirection={'column'} alignItems={'center'}>
       <BannerInfo>
-        <img src={Bg} alt="" />
+        <img src={zz} alt="" />
         <Info flexDirection={'column'} gap={26}>
           <Title className='t_'>
           Powering Progress with Perspectives: <br></br>Make Every Feedback Count

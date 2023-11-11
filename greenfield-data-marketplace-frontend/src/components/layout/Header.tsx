@@ -124,8 +124,27 @@ const Header = () => {
         /> */}
         <h1 className='title_'>SENTINEL</h1>
 
-        <Search width="380px" height="40px"></Search>
+        {/* <Search width="380px" height="40px"></Search> */}
+
+
+
+        <Button className='profile_btn_Forms' onClick={() => {
+            if (!isConnecting && !isConnected) handleModalOpen();
+              navigate('/profile?tab=collections');
+            }} variant="text" > Create Form 
+        </Button>
+
+        <Button className='profile_btn_Forms' onClick={() => {
+            if (!isConnecting && !isConnected) handleModalOpen();
+              navigate('/profile?tab=collections');
+            }} variant="text" > Avaliable Forms
+        </Button>
+ 
+
+
       </LeftCon>
+
+
 
       <RightFunCon alignItems={'center'} justifyContent={'center'} gap={18}>
         <>
