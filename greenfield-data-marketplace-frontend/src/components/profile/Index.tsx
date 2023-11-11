@@ -62,7 +62,7 @@ const ProfileList = (props: IProfileList) => {
           onChange={handleTabChange}
           items={navItems}
         />
-        {self && showButton && (
+        {/* {self && showButton && (
           <MyButton
             onClick={() => {
               window.open(`${DCELLAR_URL}`);
@@ -72,7 +72,7 @@ const ProfileList = (props: IProfileList) => {
           >
             Upload Data in DCellar
           </MyButton>
-        )}
+        )} */}
       </NavCon>
 
       <Box h={20} />
