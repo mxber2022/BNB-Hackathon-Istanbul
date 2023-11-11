@@ -129,14 +129,14 @@ const Header = () => {
 
       <RightFunCon alignItems={'center'} justifyContent={'center'} gap={18}>
         <>
-          <Button
+          <Button className='profile_btn'
             onClick={() => {
               if (!isConnecting && !isConnected) handleModalOpen();
               navigate('/profile?tab=collections');
             }}
             variant="text"
           >
-            List My Data
+            Profile
           </Button>
         </>
         {address && (

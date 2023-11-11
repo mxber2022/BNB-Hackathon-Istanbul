@@ -49,18 +49,11 @@ const Home = () => {
 
 
 
+          {/* Bucket creation starts */}
 
-
-        <h4>Create Bucket</h4>
-      bucket name :
-      <input
-        value={createBucketInfo.bucketName}
-        placeholder="bucket name"
-        onChange={(e) => {
-          setCreateBucketInfo({ ...createBucketInfo, bucketName: e.target.value });
-        }}
-      />
-      <br />  
+        <h4>Create Bucket</h4> bucket name :
+        <input value={createBucketInfo.bucketName} placeholder="bucket name" onChange={(e) => { setCreateBucketInfo({ ...createBucketInfo, bucketName: e.target.value }); }} />
+        <br />  
 
         <button
         onClick={async () => {

@@ -17,3 +17,16 @@
         padding-bottom: 10px;
     
 }
+
+.profile_btn {
+    background-color: gray;
+    color: white !important;
+    width: 100px;
+    height: 34px !important;
+    line-height: 17px;
+    font-weight: 600 !important;
+}
+
+.profile_btn:hover {
+    background-color: #474d57;
+}
