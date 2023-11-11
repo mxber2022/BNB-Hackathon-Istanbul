@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import HomeList from '../components/home/Index';
 import { Flex } from '@totejs/uikit';
 import Bg from '../images/bg.png';
+import x from '../images/x.jpg';
 import GithubIcon from '../components/svgIcon/GithubIcon';
 import { DocIcon, FullTeamIcon, LinkArrowIcon } from '@totejs/icons';
 import DiscordIcon from '../components/svgIcon/DiscordIcon';
@@ -12,6 +13,9 @@ import { useAccount } from 'wagmi';
 import { useState } from 'react';
 import { getOffchainAuthKeys } from '../utils/offchainAuth';
 
+import { CreateObject } from "../components/object/create/index";
+
+
 const Home = () => {
 
   const { address, connector } = useAccount();
@@ -21,6 +25,64 @@ const Home = () => {
   }>({
     bucketName: '',
   });
+
+  async function x() {
+    const add="0x7199D548f1B30EA083Fe668202fd5E621241CC89"
+
+    const res = await client.bucket.listBuckets({
+      address: add,
+      endpoint: "https://gnfd-testnet-sp1.bnbchain.org",
+    });
+
+    console.log("buckets: ", res);
+  }
+
+  /* 
+    Logic to upload data to greenfield
+  */
+  async function uploadToGreenfield() {
+
+    // const provider = await connector?.getProvider();
+    // const offChainData = await getOffchainAuthKeys(String(address), provider);
+    // if (!offChainData) {
+    //   alert('No offchain, please create offchain pairs first');
+    //   return;
+    // }
+
+   
+    // const file = "";
+    // const fileBytes = await file.arrayBuffer();
+    // const hashResult = await (window as any).FileHandle.getCheckSums(
+    //   new Uint8Array(fileBytes),
+    // );
+    // const { contentLength, expectCheckSums } = hashResult;
+
+    // console.log('offChainData', offChainData);
+    // console.log('hashResult', hashResult);
+
+
+    // const tx = await client.object.createObject(
+    //   {
+    //     bucketName: 'bucket_name',
+    //     objectName: 'object_name',
+    //     creator: String(address),
+    //     visibility: 'VISIBILITY_TYPE_PRIVATE',
+    //     fileType: 'json',
+    //     redundancyType: 'REDUNDANCY_EC_TYPE',
+    //     contentLength: 13311,
+    //     expectCheckSums: JSON.parse(expectCheckSums),
+    //   },
+    //   {
+    //     type: 'EDDSA',
+    //     domain: window.location.origin,
+    //     seed: offChainData.seedString,
+    //     address: String(address),
+    //   },
+    // );
+
+
+  }
+  
 
 
   return (
@@ -216,6 +278,10 @@ const Home = () => {
           </a>
         </CardCon>
       </Cards>
+
+
+      <button onClick={x}>test</button>
+      <CreateObject/>
     </Container>
   );
 };
