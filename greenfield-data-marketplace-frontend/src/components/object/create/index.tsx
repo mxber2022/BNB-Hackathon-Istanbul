@@ -158,7 +158,8 @@ export const CreateObject = () => {
           2. upload
         </button>
         <br />
-        <button
+
+        {/* <button
           onClick={async () => {
             if (!address) return;
 
@@ -205,7 +206,7 @@ export const CreateObject = () => {
           }}
         >
           create folder
-        </button>
+        </button> */}
       </>
     </div>
   );

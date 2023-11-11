@@ -3,6 +3,7 @@ import HomeList from '../components/home/Index';
 import { Flex } from '@totejs/uikit';
 import Bg from '../images/bg.png';
 import x from '../images/x.jpg';
+import z from '../images/z.jpg';
 import GithubIcon from '../components/svgIcon/GithubIcon';
 import { DocIcon, FullTeamIcon, LinkArrowIcon } from '@totejs/icons';
 import DiscordIcon from '../components/svgIcon/DiscordIcon';
@@ -14,7 +15,7 @@ import { useState } from 'react';
 import { getOffchainAuthKeys } from '../utils/offchainAuth';
 
 import { CreateObject } from "../components/object/create/index";
-
+import "../components/layout/mystyle.css";
 
 const Home = () => {
 
@@ -90,8 +91,8 @@ const Home = () => {
       <BannerInfo>
         <img src={Bg} alt="" />
         <Info flexDirection={'column'} gap={26}>
-          <Title>
-            DECENTRALIZED<br></br> FORM MARKETPLACE
+          <Title className='t_'>
+          Powering Progress with Perspectives: <br></br>Make Every Feedback Count
           </Title>
           {/* <SubTitle>
             A Best Practice of BNB Greenfield Cross Chain Programmable Ability.
@@ -102,6 +103,8 @@ const Home = () => {
 
 
       <WorkInfo flexDirection={'column'} gap={37}>
+      <WorkMainTitle>Create Form</WorkMainTitle>
+          <p>htts://</p>
         <WorkMainTitle>SUBMIT RESPONSE</WorkMainTitle>
         <h2>BNB ISTANBUL</h2>
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSet6XlbvDKJSEkMb46NXUDsp8wenBCAiCbXflVg1FNBdTEy_g/viewform?embedded=true" width="640" height="824" >Loading…</iframe>

@@ -11,8 +11,13 @@ import { DCELLAR_URL } from '../../env';
 enum Type {
   Collections = 'collections',
   Purchase = 'purchase',
+  Bucket = 'bucket'
 }
 const _navItems = [
+  {
+    name: 'My Buckets',
+    key: Type.Bucket,
+  },
   {
     name: 'My Data Collections',
     key: Type.Collections,
@@ -76,18 +81,27 @@ const ProfileList = (props: IProfileList) => {
       </NavCon>
 
       <Box h={20} />
-      {self ? (
-        currentTab === Type.Collections ? (
-          <CollectionList setShowButton={setShowButton}></CollectionList>
-        ) : (
-          <PurchaseList></PurchaseList>
-        )
-      ) : (
+      {/* "Hello" action */}
+      {currentTab === Type.Bucket && self && (
+        <div>
+          <p onClick={() => console.log('hello')}>Hello</p>
+        </div>
+      )}
+
+      {/* Render different components based on the tab and user type */}
+      {self && currentTab === Type.Collections && (
+        <CollectionList setShowButton={setShowButton}></CollectionList>
+      )}
+      {self && currentTab === Type.Purchase && (
+        <PurchaseList></PurchaseList>
+      )}
+      {!self && (
         <OtherListedList
           realAddress={realAddress}
           self={self}
         ></OtherListedList>
       )}
+
     </Container>
   );
 };
