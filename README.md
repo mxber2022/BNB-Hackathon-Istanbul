@@ -22,6 +22,7 @@
 - [Getting Started](#getting-started)
 - [Contributing](#contributing)
 - [Lines of Code](#lines-of-code)
+- [SmartContract Deployment address](#SmartContract Deployment address)
 - [Timeline](#timeline)
 - [License](#license)
 
@@ -92,6 +93,12 @@ We welcome contributions to Sentinel to help improve and expand its functionalit
 1) Greenfield JS SDK, create bucket: https://github.com/mxber2022/BNB-Hackathon-Istanbul/blob/4d5e8ea595938e1bb96d3759511fae5e47b211b2/greenfield-data-marketplace-frontend/src/pages/Home.tsx#L135
    
 2) Greenfield JS SDK, upload object to Greenfield: https://github.com/mxber2022/BNB-Hackathon-Istanbul/blob/4d5e8ea595938e1bb96d3759511fae5e47b211b2/greenfield-data-marketplace-frontend/src/components/object/create/index.tsx#L140
+
+## SmartContract Deployment address
+opbnb testnet - 0x2E61762970Ed685ae91c8aCa27D7E926C67f1662
+
+Transaction1 : https://testnet.opbnbscan.com/tx/0xf95326e3ac5c810f145b4c42ef5bdcc5f450811dc441ce0940eabfa3f8896ae0 
+Transaction2 : https://testnet.opbnbscan.com/tx/0xefca13c67e0c4a548d950c1ed5f163e355062731297f1458086899b084ea35d8
 
 ## Timeline
 
