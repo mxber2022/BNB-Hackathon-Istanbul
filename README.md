@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  Powering Progress with Perspectives: Make Every Feedback Count
+  <img src="https://readme-typing-svg.herokuapp.com?font=Roboto&duration=2000&pause=1000&color=000000&center=true&vCenter=true&random=false&width=435&lines=Powering+Progress+with+Perspectives%3A;Make+Every+Feedback+Count" alt="Typing SVG" />
 </p>
 
 <p align="center">
