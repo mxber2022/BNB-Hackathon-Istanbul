@@ -24,6 +24,18 @@ const TrendingList = () => {
   const state = useGlobal();
   const { address } = useAccount();
 
+
+    const buttonStyle = {
+
+    
+      backgroundColor: '#e1a325',
+      color: 'white',
+      width: '40px',
+      height: '25px',
+      "border-radius":'5px'
+    };
+  
+
   const columns = [
     {
       header: '#',
@@ -80,18 +92,18 @@ const TrendingList = () => {
         );
       },
     },
-    {
-      header: 'Type',
-      width: 160,
-      cell: (data: any) => {
-        const { type, name } = data;
-        return (
-          <div>
-            {type === 'Collection' ? type : contentTypeToExtension(name, name)}
-          </div>
-        );
-      },
-    },
+    // {
+    //   header: 'Type',
+    //   width: 160,
+    //   cell: (data: any) => {
+    //     const { type, name } = data;
+    //     return (
+    //       <div>
+    //         {type === 'Collection' ? type : contentTypeToExtension(name, name)}
+    //       </div>
+    //     );
+    //   },
+    // },
     {
       header: 'Price',
       width: 160,
@@ -101,14 +113,14 @@ const TrendingList = () => {
         return <div>{balance} BNB</div>;
       },
     },
-    {
-      header: 'Total Vol',
-      width: 120,
-      cell: (data: any) => {
-        const { totalVol } = data;
-        return <div>{totalVol}</div>;
-      },
-    },
+    // {
+    //   header: 'Total Vol',
+    //   width: 120,
+    //   cell: (data: any) => {
+    //     const { totalVol } = data;
+    //     return <div>{totalVol}</div>;
+    //   },
+    // },
     {
       header: 'Creator',
       cell: (data: any) => {
@@ -126,6 +138,16 @@ const TrendingList = () => {
         return <ActionCom data={data} address={address as string}></ActionCom>;
       },
     },
+
+     {
+      header: 'Rating',
+      width: 120,
+      cell: (data: any) => {
+        const { totalVol } = data;
+        return <button style={buttonStyle}>Rate</button>;
+      },
+    },
+
   ];
   return (
     <Container>
