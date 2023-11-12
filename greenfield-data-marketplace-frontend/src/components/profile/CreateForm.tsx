@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../components/layout/mystyle.css';
+import { useState } from 'react';
 
 function CreateForm() {
   const redirectToTypeform = () => {
@@ -10,6 +11,16 @@ function CreateForm() {
     window.open(typeformUrl, '_blank');
   };
 
+  const [inputValue, setInputValue] = useState('');
+    
+    const handleChange = (e:any) => {
+    setInputValue(e.target.value);
+  };
+
+  async function addLink() {
+    console.log("Adding link to database initiated", inputValue);
+  }
+
   return (
     <>
     <div>
@@ -17,8 +28,14 @@ function CreateForm() {
             <button className='zina' onClick={redirectToTypeform}>Create Form (Typeform)</button>
         </div>
 
+
+        <div className='fm_link'>
+          <label htmlFor="myInput" style={{ width: '200px', height: '40px', fontSize:'30px' }}>Enter form link </label>
+          <input type="text" id="myInput" value={inputValue} style={{ width: '500px', height: '50px', fontSize:'40px', marginTop:'100px'}} onChange={handleChange} />
+        </div>
+
         <div>
-            <button className='zinax' onClick={redirectToTypeform}>Upload Form</button>
+            <button className='zinax' onClick={addLink}>Upload Form</button>
         </div>
     
     </div>
