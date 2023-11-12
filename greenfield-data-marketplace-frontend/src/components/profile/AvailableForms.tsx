@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../../components/layout/mystyle.css';
 import { CreateObject } from "../../components/object/create/index";
 import { useState } from 'react';
@@ -16,8 +16,30 @@ function AvailableForms() {
         { eventName: 'BNB Istanbul', link: 'https://docs.google.com/forms/d/e/1FAIpQLSew3qL_N8bquAETQmk4SOY-lMNsRlL7riXIdhU-UMH8dpC03Q/viewform?embedded=true' },
         { eventName: 'ETH GLOBAL ISTANBUL', link: 'https://docs.google.com/forms/d/e/1FAIpQLSew3qL_N8bquAETQmk4SOY-lMNsRlL7riXIdhU-UMH8dpC03Q/viewform?usp=sf_link' },
         // Add other form links here
-      ];
+    ];
+    const [formLin, setFormLinks] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+          try {
+            const response = await fetch('http://localhost:8006/getAllLinks');
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
     
+            // Assuming your server returns JSON data
+            const data = await response.json();
+    
+            // Do something with the data, like updating component state
+            console.log("data", data);
+          } catch (error) {
+            console.error('Error fetching data:', error);
+          }
+        };
+    
+        fetchData();
+      }, []);
+
 
   return (
     <>

@@ -92,10 +92,21 @@ myMongoServer.post('/addLink', async (req, res) => {
             res.status(500).json({err: 'failure to save email to database'})
     });
 
-  });
+});
 
 
 /* 
     Get all data in database
     format: Event Name -> Link
 */
+
+myMongoServer.get('/getAllLinks', async (req, res) => {
+    try {
+        const allLinks = await db.collection('whitelist').find({}).toArray();
+        console.log("allLinks: ", allLinks);
+        res.status(200).json(allLinks);
+    } catch (err) {
+        console.error('Error retrieving data:', err);
+        res.status(500).json({ error: 'Failed to retrieve data from the database' });
+    }
+});
