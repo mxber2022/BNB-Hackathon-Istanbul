@@ -99,4 +99,16 @@
     background-color: rgba(51, 56, 51, 0.194);
   }
   
-  
+  .form_btn {
+    padding: 10px 20px;
+    font-size: 20px !important;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #474d57;
+    color: white; /* White text color */
+    transition: background-color 0.3s ease;
+    height: 50px;
+    margin: 2px;
+    margin-top: 50px;
+  }

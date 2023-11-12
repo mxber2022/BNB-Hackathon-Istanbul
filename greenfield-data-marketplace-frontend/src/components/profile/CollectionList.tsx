@@ -132,6 +132,7 @@ const CollectionList = (props: ICollectionList) => {
         return <TotalVol groupId={groupId}></TotalVol>;
       },
     },
+
     {
       header: 'Action',
       cell: (data: any) => {
