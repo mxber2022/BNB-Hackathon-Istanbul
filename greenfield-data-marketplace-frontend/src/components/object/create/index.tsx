@@ -3,6 +3,7 @@ import { client, selectSp } from '../../../client/index';
 import { getOffchainAuthKeys } from '../../../utils/offchainAuth'
 import { ChangeEvent, useState } from 'react';
 import { useAccount } from 'wagmi';
+import "../../layout/mystyle.css";
 
 export const CreateObject = () => {
   const { address, connector } = useAccount();
@@ -16,20 +17,22 @@ export const CreateObject = () => {
   return (
     <div>
       <>
-        <h4>Create Object</h4>
-        bucket name :
-        <input
+        <p className='p_obj'>Provide bucket details to store on BNB GreenField</p>
+        
+        <label className='label_mine'>Bucket Name </label>
+        <input style={{ width: '200px', height: '40px', marginBottom: '10px'}} 
           value={createObjectInfo.bucketName}
-          placeholder="bucket name"
+          placeholder="provide bucket name"
           onChange={(e) => {
             setCreateObjectInfo({ ...createObjectInfo, bucketName: e.target.value });
           }}
         />
+
         <br />
-        object name :
-        <input
+        <label className='label_mine'>File Name </label>
+        <input style={{ width: '200px', height: '40px' }} 
           value={createObjectInfo.objectName}
-          placeholder="object name"
+          placeholder="provide object name"
           onChange={(e) => {
             setCreateObjectInfo({ ...createObjectInfo, objectName: e.target.value });
           }}
@@ -45,7 +48,7 @@ export const CreateObject = () => {
           }}
         />
         <br />
-        <button
+        <button className='form_btnpp'
           onClick={async () => {
             if (!address || !file) {
               alert('Please select a file or address');
@@ -122,7 +125,7 @@ export const CreateObject = () => {
           1. create object tx
         </button>
         <br />
-        <button
+        <button className='form_btnpp'
           onClick={async () => {
             if (!address || !file || !txHash) return;
             console.log(file);

@@ -112,3 +112,46 @@
     margin: 2px;
     margin-top: 50px;
   }
+
+  .p_obj{
+    padding-top: 10px;
+    font-size: 20px;
+   
+    margin-bottom: 20px;
+  }
+
+  .label_mine{
+    font-size: 20px;
+  }
+
+  .input_mine{
+    width: 50px !important;
+  }
+
+  .input_mine::placeholder {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
+    font-size: 20px !important;
+    /* Additional styling properties for the placeholder text */
+  }
+
+
+
+
+  .form_btnpp {
+    padding: 10px 20px;
+    font-size: 20px !important;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #474d57;
+    color: white; /* White text color */
+    transition: background-color 0.3s ease;
+    height: 40px;
+    margin: 2px;
+    margin-top: 30px;
+  }
+
+  .form_btnpp:hover {
+    background-color: rgba(51, 56, 51, 0.194);
+  }
+  
