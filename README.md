@@ -1,12 +1,14 @@
 # Sentinel - Greenfield User Feedback Marketplace
-
 <p align="center">
-   <img src="Assets/Sentinel_logo.png">
+   <img width="600" src="Assets/Sentinel_logo.png">
 </p>
 
+
+</p>
+<br><br/>
 <p align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Roboto&duration=2000&pause=1000&color=000000&center=true&vCenter=true&random=false&width=435&lines=Powering+Progress+with+Perspectives%3A;Make+Every+Feedback+Count" alt="Typing SVG" />
-</p>
+<br><br/>
 
 <p align="center">
   <img src="Assets/Sentinel_Landing_Page.png">
