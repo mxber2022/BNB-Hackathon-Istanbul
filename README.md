@@ -86,8 +86,9 @@ We welcome contributions to Sentinel to help improve and expand its functionalit
 
 ## Lines of Code
 
-1) Greenfield Javascript SDK : **INCLUDE LINK HERE**
-
+1) Greenfield JS SDK, create bucket: https://github.com/mxber2022/BNB-Hackathon-Istanbul/blob/4d5e8ea595938e1bb96d3759511fae5e47b211b2/greenfield-data-marketplace-frontend/src/pages/Home.tsx#L135
+   
+2) Greenfield JS SDK, upload object to Greenfield: https://github.com/mxber2022/BNB-Hackathon-Istanbul/blob/4d5e8ea595938e1bb96d3759511fae5e47b211b2/greenfield-data-marketplace-frontend/src/components/object/create/index.tsx#L140
 
 ## License
 
