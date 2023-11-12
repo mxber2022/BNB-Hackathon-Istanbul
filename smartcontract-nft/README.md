@@ -20,5 +20,8 @@ npx hardhat verify --network opbnb-testnet
 
 opbnb testnet -  0x2E61762970Ed685ae91c8aCa27D7E926C67f1662
 
+Transaction1 : https://testnet.opbnbscan.com/tx/0xf95326e3ac5c810f145b4c42ef5bdcc5f450811dc441ce0940eabfa3f8896ae0
+Transaction2 : https://testnet.opbnbscan.com/tx/0xefca13c67e0c4a548d950c1ed5f163e355062731297f1458086899b084ea35d8
+
 `#` Tweet Link
 
