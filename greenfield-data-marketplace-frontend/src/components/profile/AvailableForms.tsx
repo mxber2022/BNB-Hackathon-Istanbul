@@ -12,12 +12,13 @@ function AvailableForms() {
         setSelectedTabIndex(index);
     };
 
-    const formLinks = [
-        { eventName: 'BNB Istanbul', link: 'https://docs.google.com/forms/d/e/1FAIpQLSew3qL_N8bquAETQmk4SOY-lMNsRlL7riXIdhU-UMH8dpC03Q/viewform?embedded=true' },
-        { eventName: 'ETH GLOBAL ISTANBUL', link: 'https://docs.google.com/forms/d/e/1FAIpQLSew3qL_N8bquAETQmk4SOY-lMNsRlL7riXIdhU-UMH8dpC03Q/viewform?usp=sf_link' },
-        // Add other form links here
-    ];
-    const [formLin, setFormLinks] = useState([]);
+    // const formLinks = [
+    //     { eventName: 'BNB Istanbul', link: 'https://docs.google.com/forms/d/e/1FAIpQLSew3qL_N8bquAETQmk4SOY-lMNsRlL7riXIdhU-UMH8dpC03Q/viewform?embedded=true' },
+    //     { eventName: 'ETH GLOBAL ISTANBUL', link: 'https://docs.google.com/forms/d/e/1FAIpQLSew3qL_N8bquAETQmk4SOY-lMNsRlL7riXIdhU-UMH8dpC03Q/viewform?usp=sf_link' },
+    //     // Add other form links here
+    // ];
+
+    const [formLinks, setFormLinks] = useState<{ eventName: string; link: string }[]>([]);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -29,6 +30,7 @@ function AvailableForms() {
     
             // Assuming your server returns JSON data
             const data = await response.json();
+            setFormLinks(data);
     
             // Do something with the data, like updating component state
             console.log("data", data);
