@@ -17,15 +17,53 @@ function CreateForm() {
     setInputValue(e.target.value);
   };
 
+  const [eventName, setEventName] = useState('');
+
+  const handleEventNameChange = (e:any) => {
+    setEventName(e.target.value);
+  };
+
+
+
+
   async function addLink() {
-    console.log("Adding link to database initiated", inputValue);
+    try {
+      const response = await fetch('http://localhost:8006/addLink', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          eventName,
+          link: inputValue,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+
+      const data = await response.json();
+      console.log('Link added successfully:', data);
+    } catch (error) {
+      console.error('Error adding link:', error);
+    }
   }
+
+
 
   return (
     <>
     <div>
         <div>
             <button className='zina' onClick={redirectToTypeform}>Create Form (Typeform)</button>
+        </div>
+
+
+
+        <div>
+          <label htmlFor="eventNameInput" style={{ width: '200px', height: '40px', fontSize:'30px' }}>Enter Event Name </label>
+          <input type="text" id="eventNameInput" value={eventName} onChange={handleEventNameChange} style={{ width: '400px', height: '50px', fontSize:'40px', marginTop:'100px'}}/>
         </div>
 
 
