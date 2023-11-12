@@ -19,7 +19,7 @@ const _navItems = [
     key: Type.Bucket,
   },
   {
-    name: 'My Data Collections',
+    name: 'My forms',
     key: Type.Collections,
   },
   {
