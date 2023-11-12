@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <img  width="300" src="Assets/Sentinel_Landing_Page.png">
+  <img src="Assets/Sentinel_Landing_Page.png">
 </p>
 
 ## Table of Contents
