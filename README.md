@@ -47,6 +47,8 @@ Another important component is subsequent and secondary sales of user data, this
 
 ## Presentation Media
 
+https://twitter.com/The_Game_2030/status/1723572763145748666
+
 https://www.canva.com/design/DAFz3-To7vE/DtJIURBm4c4nVpxl3YvO4A/edit?utm_content=DAFz3-To7vE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
 **INCLUDE YOUTUBE LINK HERE**
