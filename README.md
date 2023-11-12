@@ -22,6 +22,7 @@
 - [Getting Started](#getting-started)
 - [Contributing](#contributing)
 - [Lines of Code](#lines-of-code)
+- [Timeline](#timeline)
 - [License](#license)
 
 ## Features
@@ -89,6 +90,12 @@ We welcome contributions to Sentinel to help improve and expand its functionalit
 1) Greenfield JS SDK, create bucket: https://github.com/mxber2022/BNB-Hackathon-Istanbul/blob/4d5e8ea595938e1bb96d3759511fae5e47b211b2/greenfield-data-marketplace-frontend/src/pages/Home.tsx#L135
    
 2) Greenfield JS SDK, upload object to Greenfield: https://github.com/mxber2022/BNB-Hackathon-Istanbul/blob/4d5e8ea595938e1bb96d3759511fae5e47b211b2/greenfield-data-marketplace-frontend/src/components/object/create/index.tsx#L140
+
+## Timeline
+
+<p align="center">
+  <img src="Assets/Sentinel_Y0_timeline.jpg">
+</p>
 
 ## License
 
