@@ -155,3 +155,14 @@
     background-color: rgba(51, 56, 51, 0.194);
   }
   
+  .textme {
+    background-color: white;
+    width: 40px;
+    padding-left: 5px;
+    border-radius: 3px;
+    margin: 30px;
+  }
+
+  .GGG{
+    border-radius: 10px;
+  }

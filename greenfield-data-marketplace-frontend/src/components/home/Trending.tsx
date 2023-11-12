@@ -15,6 +15,7 @@ import { useGlobal } from '../../hooks/useGlobal';
 import { CollectionLogo } from '../svgIcon/CollectionLogo';
 import { useAccount } from 'wagmi';
 import { ActionCom } from '../ActionCom';
+import { useState } from 'react';
 
 const TrendingList = () => {
   const navigator = useNavigate();
@@ -23,6 +24,56 @@ const TrendingList = () => {
 
   const state = useGlobal();
   const { address } = useAccount();
+
+  
+  /* Pop up rating button */
+  const [showPopup, setShowPopup] = useState(false);
+  const [rating, setRating] = useState('')
+
+  const openPopup = () => {
+    setShowPopup(true);
+  };
+
+  const closePopup = () => {
+    setShowPopup(false);
+  };
+
+  const handleRatingChange = (e:any) => {
+    setRating(e.target.value);
+  };
+
+  const handleRateButtonClick = () => {
+    openPopup();
+  };
+
+  const handlePopupSubmit = (e:any) => {
+    e.preventDefault();
+    // Add your logic to handle the submitted rating
+    console.log('Rating submitted:', rating);
+    closePopup();
+  };
+  const buttonStyles: React.CSSProperties = {
+    fontSize: '16px',
+    color: 'white',
+    backgroundColor: 'blue',
+    padding: '10px',
+    cursor: 'pointer',
+  };
+
+  const popupStyle: React.CSSProperties = {
+    display: showPopup ? 'block' : 'none',
+    position: 'fixed',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    padding: '20px',
+    backgroundColor: '#e1a325',
+    zIndex: 1000,
+    color: "black",
+  };
+/* ends Pop up rating button */
+
+
 
 
     const buttonStyle = {
@@ -139,14 +190,34 @@ const TrendingList = () => {
       },
     },
 
+
+
+
+
      {
       header: 'Rating',
       width: 120,
       cell: (data: any) => {
         const { totalVol } = data;
-        return <button style={buttonStyle}>Rate</button>;
+        return <><button style={buttonStyle} onClick={handleRateButtonClick}>Rate</button>
+        <div className='GGG' style={popupStyle}>
+        <form onSubmit={handlePopupSubmit}>
+          <label>
+            Enter your rating : 
+            <input className='textme'
+              type="number"
+              value={rating}
+              onChange={handleRatingChange}
+            />
+          </label>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+        </>;
       },
     },
+
+
 
   ];
   return (

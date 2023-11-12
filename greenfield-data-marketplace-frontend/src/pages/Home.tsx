@@ -114,11 +114,11 @@ const Home = () => {
 
           {/* Bucket creation starts */}
 
-        <h4>Create Bucket</h4> bucket name :
+        {/* <h4>Create Bucket</h4> bucket name :
         <input value={createBucketInfo.bucketName} placeholder="bucket name" onChange={(e) => { setCreateBucketInfo({ ...createBucketInfo, bucketName: e.target.value }); }} />
-        <br />  
+        <br />   */}
 
-        <button
+        {/* <button
         onClick={async () => {
           if (!address) return;
 
@@ -173,7 +173,7 @@ const Home = () => {
         }}
       >
         broadcast with simulate
-      </button>
+      </button> */}
 
 
 
@@ -285,7 +285,7 @@ const Home = () => {
       </Cards>
 
 
-      <button onClick={x}>test</button>
+      {/* <button onClick={x}>test</button> */}
       {/* <CreateObject/> */}
     </Container>
   );
